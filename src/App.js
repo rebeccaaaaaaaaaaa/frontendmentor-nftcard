@@ -198,24 +198,24 @@ function App() {
       <Card>
         <a href="">
         <CardImage>
-         <Image src={imgview} alt=""/>
+         <Image src={imgview} alt="Equilibrium #3429 Preview"/>
        </CardImage>
         </a>
         <ContentCard>
           <TitleLinkArea>
-              <TitleLink href="#">Equilibrium #3429</TitleLink>
+              <TitleLink href="#" alt="">Equilibrium #3429</TitleLink>
           </TitleLinkArea>
           <Description> 
             Our Equilibrium collection promotes balance and calm.
           </Description>  
         </ContentCard>
         <InformationCard>
-          <p><img src={ethicon} width={11} height={18} alt="icon ethereum"/> 0.041 ETH </p>
-          <p><img src={clockicon} width={17} height={17} alt="icon clock"/> 3 days left </p>
+          <p><img src={ethicon} width={11} height={18} alt="" aria-hidden="true"/> 0.041 ETH </p>
+          <p><img src={clockicon} width={17} height={17} alt="" aria-hidden="true"/> 3 days left </p>
         </InformationCard>
         <Line/>
         <Creator>
-          <img src={avatar} alt="avatar"/>
+          <img src={avatar} alt="Jules Wyvern's avatar"/>
           <p> Creation of <a href="#"> Jules Wyvern</a> </p>
         </Creator>
       </Card>
