@@ -4,6 +4,8 @@ import imgview from '../src/images/image-equilibrium.jpg';
 import ethicon from '../src/images/icon-ethereum.png';
 import clockicon from  '../src/images/icon-clock.png';
 import avatar from '../src/images/image-avatar.png';
+import iconview from '../src/images/icon-view.png';
+
 
 
 export const Main = styled.div`
@@ -23,40 +25,71 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 10px;
-  padding: 10px;
+  padding: 20px;
   transition: all 0.5s;
-  padding: 35px;
-
+  padding: 20px;
+  width: 35%;
+  max-width: 375px;
+  min-width: 350px;
 `
 
-export const H1 = styled.h1`
-  font-size: 30px;
+export const TitleLinkArea = styled.div`
+  padding: 1.5rem 0;
+`
+
+export const TitleLink = styled.a`
+  font-size: 26.4px;
   color: hsl(0,0%,100%);
-  padding-top: 2rem;
   cursor: pointer;
   transition: all 0.5s;
-
+  text-decoration: none;
+  font-weight: bold;
+ 
   &:hover {
     color: hsl(178, 100%, 50%);
   }
 `
 
-export const Image = styled.img`
-  border-radius: 10px;
-  cursor: pointer;
-  transition: all 0.5s;
+export const CardImage = styled.div`
+    background: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
 
-  &:hover {
-    opacity: 0.5;  
-  }
+
+    &:hover::after {
+      opacity: 0.6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:after {
+      background: hsl(178deg 100% 50%);
+      display: inline-block;
+      position: absolute;
+      content: url('${iconview}');
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      transition: all 0.5s;
+      border-radius: 10px;
+
+    }
 `
 
-export const PDescription = styled.p`
-  color: hsl(215,51%,70%);
-  padding-top: 2rem;
-  font-size: 25px;
-  width: 25rem;
+export const Image = styled.img`
+  border-radius: 10px;
+  width: 100%;
+`
+
+export const Description = styled.p`
+    color: hsl(215,51%,70%);
+    font-size: 16.6px;
 `
 
 export const ContentCard = styled.div`
@@ -71,7 +104,7 @@ export const InformationCard = styled.div`
    p {
     color: hsl(178, 100%, 50%);
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16.6px;
     padding-top: 2rem;
     display: flex;
     align-items: center;
@@ -83,7 +116,7 @@ export const InformationCard = styled.div`
 
     p + p {
       color: hsl(215,51%,70%);
-      font-size: 20px;
+      font-size: 16.6px;
       font-weight: normal;
     }
 
@@ -98,24 +131,26 @@ export const Line = styled.hr`
 export const Creator = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 2rem;
+  padding: 25px 0 20px;
 
   img{
-    width: 55px;
+    width: 35px;
     border-radius: 50%;
     border: 3px solid #fff;
+    height: 35px;
   }
 
   p{
     color:  hsl(215,51%,70%);
-    font-size: 20px;
-    margin-left: 1.5rem;
+    font-size: 16.6px;
+    margin-left: 1rem;
 
-    span{
+    a{
       font-weight: bold;
       color: hsl(0,0%,100%);
       transition: all 0.5s;
       cursor: pointer;
+      text-decoration: none;
 
       &:hover {
         color: hsl(178, 100%, 50%);
@@ -128,25 +163,27 @@ function App() {
   return (
     <Main>
       <Card>
-        <Image src={imgview} width={400} alt="Preview"/>
-        
+        <a href="">
+        <CardImage>
+         <Image src={imgview} alt=""/>
+       </CardImage>
+        </a>
         <ContentCard>
-          <H1>Equilibrium #3429</H1>
-          <PDescription> 
+          <TitleLinkArea>
+              <TitleLink href="#">Equilibrium #3429</TitleLink>
+          </TitleLinkArea>
+          <Description> 
             Our Equilibrium collection promotes balance and calm.
-          </PDescription>  
+          </Description>  
         </ContentCard>
-
         <InformationCard>
           <p><img src={ethicon} width={11} height={18} alt="icon ethereum"/> 0.041 ETH </p>
           <p><img src={clockicon} width={17} height={17} alt="icon clock"/> 3 days left </p>
         </InformationCard>
-
         <Line/>
-
         <Creator>
           <img src={avatar} alt="avatar"/>
-          <p> Creation of <span> Jules Wyvern</span> </p>
+          <p> Creation of <a href="#"> Jules Wyvern</a> </p>
         </Creator>
       </Card>
     </Main>
