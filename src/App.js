@@ -42,13 +42,16 @@ export const TitleLinkArea = styled.div`
   padding: 1.5rem 0;
 `
 
-export const TitleLink = styled.a`
-  font-size: 22.4px;
+export const TitleLink = styled.h1`
+  font-size: 11.4px;
   color: hsl(0,0%,100%);
   cursor: pointer;
   transition: all 0.5s;
-  text-decoration: none;
   font-weight: bold;
+
+  a {
+    text-decoration: none;
+  }
 
   @media (max-width: 600px) {
     font-size: 20.4px;
@@ -203,7 +206,7 @@ function App() {
         </a>
         <ContentCard>
           <TitleLinkArea>
-              <TitleLink href="#">Equilibrium #3429</TitleLink>
+              <TitleLink href="#"><h1>Equilibrium #3429</h1></TitleLink>
           </TitleLinkArea>
           <Description> 
             Our Equilibrium collection promotes balance and calm.
