@@ -28,9 +28,8 @@ export const Card = styled.div`
   padding: 20px;
   transition: all 0.5s;
   padding: 20px;
-  width: 35%;
-  max-width: 375px;
-  min-width: 350px;
+  max-width: 300px;
+  min-width: 300px;
 `
 
 export const TitleLinkArea = styled.div`
@@ -38,7 +37,7 @@ export const TitleLinkArea = styled.div`
 `
 
 export const TitleLink = styled.a`
-  font-size: 26.4px;
+  font-size: 22.4px;
   color: hsl(0,0%,100%);
   cursor: pointer;
   transition: all 0.5s;
@@ -89,7 +88,7 @@ export const Image = styled.img`
 
 export const Description = styled.p`
     color: hsl(215,51%,70%);
-    font-size: 16.6px;
+    font-size: 15.6px;
 `
 
 export const ContentCard = styled.div`
@@ -104,7 +103,7 @@ export const InformationCard = styled.div`
    p {
     color: hsl(178, 100%, 50%);
     font-weight: bold;
-    font-size: 16.6px;
+    font-size: 15.6px;
     padding-top: 2rem;
     display: flex;
     align-items: center;
@@ -116,7 +115,7 @@ export const InformationCard = styled.div`
 
     p + p {
       color: hsl(215,51%,70%);
-      font-size: 16.6px;
+      font-size: 15.6px;
       font-weight: normal;
     }
 
@@ -142,7 +141,7 @@ export const Creator = styled.div`
 
   p{
     color:  hsl(215,51%,70%);
-    font-size: 16.6px;
+    font-size: 15.6px;
     margin-left: 1rem;
 
     a{
