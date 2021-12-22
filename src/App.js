@@ -30,6 +30,12 @@ export const Card = styled.div`
   padding: 20px;
   max-width: 300px;
   min-width: 300px;
+
+  @media (max-width: 600px) {
+    max-width: 270px;
+    min-width: 250px;
+    
+  }
 `
 
 export const TitleLinkArea = styled.div`
@@ -43,6 +49,11 @@ export const TitleLink = styled.a`
   transition: all 0.5s;
   text-decoration: none;
   font-weight: bold;
+
+  @media (max-width: 600px) {
+    font-size: 20.4px;
+    
+  }
  
   &:hover {
     color: hsl(178, 100%, 50%);
@@ -89,6 +100,10 @@ export const Image = styled.img`
 export const Description = styled.p`
     color: hsl(215,51%,70%);
     font-size: 15.6px;
+    
+    @media (max-width: 600px) {
+      font-size: 14.4px;
+    }
 `
 
 export const ContentCard = styled.div`
@@ -108,6 +123,11 @@ export const InformationCard = styled.div`
     display: flex;
     align-items: center;
 
+     
+    @media (max-width: 600px) {
+      font-size: 13.4px;
+    }
+
     img{
       margin-right: 10px;
     }
@@ -117,6 +137,11 @@ export const InformationCard = styled.div`
       color: hsl(215,51%,70%);
       font-size: 15.6px;
       font-weight: normal;
+
+       
+    @media (max-width: 600px) {
+      font-size: 14.4px;
+    }
     }
 
     
@@ -132,6 +157,10 @@ export const Creator = styled.div`
   align-items: center;
   padding: 25px 0 20px;
 
+  @media (max-width: 600px) {
+    padding: 20px 0 5px;
+  }
+
   img{
     width: 35px;
     border-radius: 50%;
@@ -143,6 +172,11 @@ export const Creator = styled.div`
     color:  hsl(215,51%,70%);
     font-size: 15.6px;
     margin-left: 1rem;
+
+     
+    @media (max-width: 600px) {
+      font-size: 14.4px;
+    }
 
     a{
       font-weight: bold;
