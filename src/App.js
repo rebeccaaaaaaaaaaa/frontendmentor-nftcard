@@ -203,7 +203,7 @@ function App() {
         </a>
         <ContentCard>
           <TitleLinkArea>
-              <TitleLink href="#" alt="">Equilibrium #3429</TitleLink>
+              <TitleLink href="#">Equilibrium #3429</TitleLink>
           </TitleLinkArea>
           <Description> 
             Our Equilibrium collection promotes balance and calm.
